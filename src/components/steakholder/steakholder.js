@@ -1,18 +1,35 @@
 import React from "react";
 
-const Steakholder = () => {
+const Steakholder = ({ img, name, description }) => {
   return (
-    <div className="md:px-16 text-center pt-4 md:pt-4">
-      <div
-        className="rounded-2xl w-full flex flex-col items-center mt-8"
-        style={{ height: "50px", border: "1px solid black" }}
-      >
-        <img />
+    <div className="md:px-10 text-center pt-4">
+      <div className="rounded-2xl w-full flex flex-col items-center">
+        <img
+          width="75%"
+          height="75%"
+          src={img}
+          alt={img}
+          style={{ border: "3px solid white", zIndex: "10" }}
+        />
         <div
-          className="rounded-2xl flex bg-current w-3/4"
-          style={{ height: "50px", marginTop: "30px" }}
+          className="rounded-2xl flex w-full"
+          style={{
+            color: "white",
+            backgroundColor: "#4BA48A",
+            marginTop: "-20px",
+            zIndex: "9",
+            height: "180px",
+          }}
         >
-          dradasd
+          <div
+            className="flex flex-col justify-center w-full"
+            style={{ marginTop: "30px", fontSize: "20px" }}
+          >
+            <div>{name}</div>
+            <div className="font-light p-3" style={{ fontSize: "14px" }}>
+              {description}
+            </div>
+          </div>
         </div>
       </div>
     </div>

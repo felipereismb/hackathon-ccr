@@ -1,17 +1,19 @@
 import React from "react";
 
-import IntroComponent from "./components/intro";
-import SteakholdersComponent from "./components/stakeholders";
-import ServicesComponent from "./components/services";
-import QuestionsComponent from "./components/questions";
+import IntroSection from "./components/intro";
+import SteakholdersSection from "./components/stakeholders";
+import ServicesSection from "./components/services";
+import QuestionsSection from "./components/questions";
+import PrepareComponent from "./components/prepare";
 
 const HomeComponent = () => {
   return (
-    <div className="px-4 md:m-16 grid grid-cols-1 gap-4 md:bg-white">
-      <IntroComponent />
-      <SteakholdersComponent />
-      <ServicesComponent />
-      <QuestionsComponent />
+    <div className="container mx-auto px-8">
+      <IntroSection />
+      <SteakholdersSection />
+      <PrepareComponent />
+      <ServicesSection />
+      <QuestionsSection />
     </div>
   );
 };
