@@ -1,0 +1,6 @@
+.animated-rater {
+  transform: translateZ(0);
+}
+.animated-rater svg {
+  cursor: pointer;
+}
