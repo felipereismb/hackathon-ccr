@@ -15,7 +15,7 @@ export default () => {
           backgroundImage: "url(imgs/backgrounds/intro.png)",
           backgroundRepeat: "no-repeat",
           objectFit: "cover",
-          backgroundSize: "contain",
+          backgroundSize: "cover",
         }}
       >
         <div className="py-6 md:pt-32 flex justify-center items-center">

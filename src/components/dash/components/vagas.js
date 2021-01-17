@@ -1,32 +1,22 @@
 import React, { useState } from "react";
 
-import {
-  withScriptjs,
-  withGoogleMap,
-  GoogleMap,
-  Marker,
-} from "react-google-maps";
+import GoogleMapReact from "google-map-react";
 
 import Separator from "src/components/UI/separator";
 import ModalVaga from "src/components/UI/modal/vaga-modal";
 
 const defaultCenter = { lat: -10.252673, lng: -48.324874 };
-const defaultOptions = { scrollwheel: false };
-const loadingElementStyle = { height: "100%" };
-const containerElementStyle = { height: "500px" };
-const mapElementStyle = { height: "100%" };
 
-const RegularMap = withScriptjs(
-  withGoogleMap((props) => (
-    <GoogleMap
-      defaultZoom={4}
-      defaultCenter={defaultCenter}
-      defaultOptions={defaultOptions}
-    >
-      <Marker position={defaultCenter} onClick={props.onClickMarker} />
-    </GoogleMap>
-  ))
-);
+const markers = [
+  { lat: -23.225706, lng: -45.916568 },
+  { lat: -10.252673, lng: -48.324874 },
+  { lat: -22.544178, lng: -43.58877 },
+  { lat: -12.612144, lng: -41.673002 },
+  { lat: -20.723391, lng: -54.474291 },
+  { lat: -13.071071, lng: -55.919413 },
+  { lat: -16.82488, lng: -49.164749 },
+  { lat: -19.939458, lng: -43.935225 },
+];
 
 const VagasComponent = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -39,13 +29,25 @@ const VagasComponent = () => {
         </div>
         <Separator />
       </div>
-      <RegularMap
-        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyDOrvhkeogBJ-yRI4j2yFIvWh481GPu3cw"
-        loadingElement={<div style={loadingElementStyle} />}
-        containerElement={<div style={containerElementStyle} />}
-        mapElement={<div style={mapElementStyle} />}
-        onClickMarker={() => setOpenModal(true)}
-      />
+      <div className="mb-16" style={{ height: "500px", width: "100%" }}>
+        <GoogleMapReact
+          bootstrapURLKeys={{ key: "AIzaSyDOrvhkeogBJ-yRI4j2yFIvWh481GPu3cw" }}
+          defaultCenter={defaultCenter}
+          defaultZoom={5}
+        >
+          {markers.map((marker) => (
+            <div
+              lat={marker.lat}
+              lng={marker.lng}
+              style={{ cursor: "pointer" }}
+              onClick={() => setOpenModal(true)}
+            >
+              <div className="pin" />
+              <div className="pulse" />
+            </div>
+          ))}
+        </GoogleMapReact>
+      </div>
       <ModalVaga open={openModal} onClose={() => setOpenModal(false)} />
     </div>
   );

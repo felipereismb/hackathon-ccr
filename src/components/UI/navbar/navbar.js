@@ -1,4 +1,5 @@
 import React from "react";
+import Router from "next/router";
 
 const NavBar = ({ type }) => {
   return (
@@ -13,7 +14,13 @@ const NavBar = ({ type }) => {
           </div>
 
           {type === "dash" && (
-            <div className="lg:flex lg:items-center lg: justify-end">
+            <div
+              onClick={() => {
+                Router.push("/profile");
+              }}
+              className="lg:flex lg:items-center lg: justify-end"
+              style={{ cursor: "pointer" }}
+            >
               <div className="mr-3">Felipe Reis</div>
               <img
                 className="rounded-full"
