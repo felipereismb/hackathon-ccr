@@ -37,7 +37,7 @@ button:hover {
   height: 30px;
   border-radius: 50% 50% 50% 0;
   background: linear-gradient(to top, #4BA48A 0%, #014359 100%);
-  position: absolute;
+  position: relative;
   transform: rotate(-45deg);
   left: 50%;
   top: 50%;

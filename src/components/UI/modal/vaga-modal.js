@@ -4,18 +4,31 @@ import Router from "next/router";
 const ModalVaga = ({ open, onClose }) => {
   return (
     open && (
-      <div className="flex items-center justify-center fixed left-0 bottom-0 w-full h-full bg-gray-800 bg-opacity-60">
+      <div
+        className="flex items-center justify-center fixed left-0 bottom-0 w-full h-full bg-gray-800"
+        style={{ "--bg-opacity": ".8" }}
+      >
         <div className="bg-white rounded-lg w-1/2">
           <div className="flex flex-col items-start p-4">
-            <div className="flex items-center w-full">
-              <div className="text-gray-900 font-medium text-lg">
-                Vaga [aasdadads]
-              </div>
+            <div
+              className="leading-10 font-bold mb-6"
+              style={{ fontSize: "42px" }}
+            >
+              Auxiliar administrativo
             </div>
-            <hr />
-            <div className="">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            <div
+              className="leading-10 font-bold mb-2"
+              style={{ fontSize: "30px", marginTop: "-16px" }}
+            >
+              CCR Nova Dutra - São José dos Campos
+            </div>
+            <div
+              className="leading-8 mt-8 font-light"
+              style={{ color: "#7D7987", fontSize: "21px" }}
+            >
+              Atendimento ao público, atendimento telefônico, elaboração de
+              relatórios, cadastro de usuários no sistema, agendamento de
+              consultas, análise de documentos, arquivo.
             </div>
             <hr />
             <div className="ml-auto">
@@ -23,13 +36,18 @@ const ModalVaga = ({ open, onClose }) => {
                 onClick={() => {
                   Router.push("/details");
                 }}
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                className="text-white font-bold py-2 px-4 rounded"
               >
                 Ver mais
               </button>
               <button
                 onClick={onClose}
-                className="bg-transparent ml-4 hover:bg-gray-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
+                style={{
+                  backgroundColor: "white",
+                  borderColor: "#4BA48A",
+                  color: "#4BA48A",
+                }}
+                className="ml-4 font-semibold py-2 px-4 border rounded"
               >
                 Close
               </button>

@@ -32,7 +32,7 @@ const SteakholdersComponent = () => {
       </div>
       <div className="md:m-16 grid grid-cols-3 gap-4">
         <Steakholder
-          img="imgs/intercambista.jpeg"
+          img="imgs/intercambista.png"
           name="Intercambista"
           description="Quem vai participar da experiência de imersão de uma nova cultura e ainda adiquirir conhecimento em uma nova área de atuação profissional"
         />

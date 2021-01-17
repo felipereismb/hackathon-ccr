@@ -10,7 +10,7 @@ export default () => {
           backgroundImage: "url(imgs/backgrounds/intro.png)",
           backgroundRepeat: "no-repeat",
           objectFit: "cover",
-          backgroundSize: "contain",
+          backgroundSize: "cover",
         }}
       >
         <DynamicHead />

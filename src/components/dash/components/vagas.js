@@ -5,7 +5,7 @@ import GoogleMapReact from "google-map-react";
 import Separator from "src/components/UI/separator";
 import ModalVaga from "src/components/UI/modal/vaga-modal";
 
-const defaultCenter = { lat: -10.252673, lng: -48.324874 };
+const defaultCenter = { lat: -16.82488, lng: -49.164749 };
 
 const markers = [
   { lat: -23.225706, lng: -45.916568 },
@@ -23,13 +23,13 @@ const VagasComponent = () => {
 
   return (
     <div className="md:px-16 pt-4 md:pt-4">
-      <div className="md:px-16 mb-5 flex flex-col items-center center pt-4 md:pt-4 relative">
-        <div className="font-bold  mb-4" style={{ fontSize: "36px" }}>
+      <div className="md:px-16 flex flex-col items-center center pt-4 md:pt-4 relative">
+        <div className="font-bold mb-4" style={{ fontSize: "36px" }}>
           Vagas
         </div>
         <Separator />
       </div>
-      <div className="mb-16" style={{ height: "500px", width: "100%" }}>
+      <div className="py-8" style={{ height: "300px", width: "100%" }}>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyDOrvhkeogBJ-yRI4j2yFIvWh481GPu3cw" }}
           defaultCenter={defaultCenter}
@@ -42,7 +42,16 @@ const VagasComponent = () => {
               style={{ cursor: "pointer" }}
               onClick={() => setOpenModal(true)}
             >
-              <div className="pin" />
+              <div className="pin flex items-center justify-center">
+                <img
+                  style={{
+                    height: "20px",
+                    width: "auto",
+                    transform: "rotate(45deg)",
+                  }}
+                  src="imgs/logo/brasis-logo.png"
+                />
+              </div>
               <div className="pulse" />
             </div>
           ))}
