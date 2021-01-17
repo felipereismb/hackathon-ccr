@@ -30,7 +30,8 @@ const NavBar = ({ type }) => {
               />
             </div>
           )}
-          {type !== "dash" && (
+
+          {type !== "dash" && type !== "profile" && type !== "vagas" && (
             <div className="lg:flex lg:items-center lg: justify-end">
               <div className="text-sm">
                 <a
@@ -62,6 +63,46 @@ const NavBar = ({ type }) => {
                   className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25"
                 >
                   Login
+                </a>
+              </div>
+            </div>
+          )}
+
+          {type == "profile" && (
+            <div className="lg:flex lg:items-center lg: justify-end">
+              <div className="text-sm">
+                <a
+                  href="/dash"
+                  className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
+                >
+                  Buscar vagas
+                </a>
+
+                <a
+                  href="/profile"
+                  className="block mt-4 font-bold lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 "
+                >
+                  Perfil
+                </a>
+              </div>
+            </div>
+          )}
+
+          {type == "vagas" && (
+            <div className="lg:flex lg:items-center lg: justify-end">
+              <div className="text-sm">
+                <a
+                  href="/dash"
+                  className="block mt-4 font-bold lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
+                >
+                  Buscar vagas
+                </a>
+
+                <a
+                  href="/profile"
+                  className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25"
+                >
+                  Perfil
                 </a>
               </div>
             </div>

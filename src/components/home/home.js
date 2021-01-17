@@ -3,7 +3,6 @@ import React from "react";
 import IntroSection from "./components/intro";
 import SteakholdersSection from "./components/stakeholders";
 import ServicesSection from "./components/services";
-import QuestionsSection from "./components/questions";
 import PrepareComponent from "./components/prepare";
 
 const HomeComponent = () => {
@@ -13,7 +12,6 @@ const HomeComponent = () => {
       <SteakholdersSection />
       <PrepareComponent />
       <ServicesSection />
-      {/* <QuestionsSection /> */}
     </div>
   );
 };

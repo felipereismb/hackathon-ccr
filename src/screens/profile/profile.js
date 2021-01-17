@@ -6,7 +6,7 @@ import ProfileComponent from 'src/components/profile';
 const Profile = () => {
   return (
     <>
-      <UINavBar type="dash" />
+      <UINavBar type="profile" />
       <ProfileComponent />
     </>
   );

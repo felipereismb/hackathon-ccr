@@ -14,7 +14,7 @@ const SignIn = () => {
     setTimeout(() => {
       setLoading(false);
       if (email && password) {
-        Router.push("/dash");
+        Router.push("/profile");
       }
     }, 200);
   };

@@ -1,7 +1,5 @@
 import React from "react";
 
-import Separator from "src/components/UI/separator";
-
 const DescriptionComponent = () => {
   return (
     <div className="md:px-16">

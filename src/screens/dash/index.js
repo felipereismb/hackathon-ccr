@@ -6,7 +6,7 @@ import DashComponent from "app/components/dash";
 const dash = () => {
   return (
     <>
-      <UINavBar type="dash" />
+      <UINavBar type="vagas" />
       <DashComponent />
     </>
   );
