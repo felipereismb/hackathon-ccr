@@ -32,7 +32,7 @@ const VagasComponent = () => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <div className="container mx-auto pb-5 px-8">
+    <div className="md:px-16 pt-4 md:pt-4">
       <div className="md:px-16 mb-5 flex flex-col items-center center pt-4 md:pt-4 relative">
         <div className="font-bold  mb-4" style={{ fontSize: "36px" }}>
           Vagas
