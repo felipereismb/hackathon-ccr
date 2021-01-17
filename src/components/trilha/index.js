@@ -33,6 +33,15 @@ const TrilhaComponent = () => {
                 </div>
               </div>
             </div>
+            <div className="flex justify-between px-5 py-3">
+              <div/>
+              <div
+                className="font-bold cursor-pointer hover:opacity-25"
+                style={{ fontSize: "24px" }}
+              >
+                Falar com mentor
+              </div>
+            </div>
           </div>
         </div>
 

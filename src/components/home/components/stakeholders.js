@@ -39,12 +39,12 @@ const SteakholdersComponent = () => {
         <Steakholder
           img="imgs/mentor.png"
           name="Mentor"
-          description="Quem vai participar da experiência de imersão de uma nova cultura e ainda adiquirir conhecimento em uma nova área de atuação profissional"
+          description="Quem vai mentorar o intercambista em uma jornada de conhecimento a aprofundamento profissional"
         />
         <Steakholder
           img="imgs/anfitriao.png"
           name="Anfitrião"
-          description="Quem vai participar da experiência de imersão de uma nova cultura e ainda adiquirir conhecimento em uma nova área de atuação profissional"
+          description="Irá hospedar o intercambista durante o processo de intercâmbio, fornecendo um espaço seguro e acolhedor"
         />
       </div>
     </>

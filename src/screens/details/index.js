@@ -6,7 +6,7 @@ import DetailsComponent from "app/components/details";
 const details = () => {
   return (
     <>
-      <UINavBar type="dash" />
+      <UINavBar type="vagas" />
       <DetailsComponent />
     </>
   );

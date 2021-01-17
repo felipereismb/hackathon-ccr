@@ -35,28 +35,16 @@ const NavBar = ({ type }) => {
             <div className="lg:flex lg:items-center lg: justify-end">
               <div className="text-sm">
                 <a
-                  href="#home"
+                  href="/"
                   className="block mt-4 font-bold lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
                 >
                   Home
                 </a>
                 <a
-                  href="#faca-parte"
+                  href="/dash"
                   className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
                 >
-                  Encontre o primeiro emprego
-                </a>
-                <a
-                  href="#beneficios"
-                  className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
-                >
-                  Vagas
-                </a>
-                <a
-                  href="#perguntas-frequentes"
-                  className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
-                >
-                  About us
+                  Buscar vagas
                 </a>
                 <a
                   href="/login"
@@ -70,6 +58,12 @@ const NavBar = ({ type }) => {
 
           {type == "profile" && (
             <div className="lg:flex lg:items-center lg: justify-end">
+              <a
+                href="/"
+                className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
+              >
+                Home
+              </a>
               <div className="text-sm">
                 <a
                   href="/dash"
@@ -92,6 +86,12 @@ const NavBar = ({ type }) => {
             <div className="lg:flex lg:items-center lg: justify-end">
               <div className="text-sm">
                 <a
+                  href="/"
+                  className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
+                >
+                  Home
+                </a>
+                <a
                   href="/dash"
                   className="block mt-4 font-bold lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
                 >
@@ -99,10 +99,10 @@ const NavBar = ({ type }) => {
                 </a>
 
                 <a
-                  href="/profile"
+                  href="/login"
                   className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25"
                 >
-                  Perfil
+                  Login
                 </a>
               </div>
             </div>
