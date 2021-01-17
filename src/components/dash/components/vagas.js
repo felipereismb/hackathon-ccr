@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import {
   withScriptjs,
@@ -8,6 +8,7 @@ import {
 } from "react-google-maps";
 
 import Separator from "src/components/UI/separator";
+import ModalVaga from "src/components/UI/modal/vaga-modal";
 
 const defaultCenter = { lat: -10.252673, lng: -48.324874 };
 const defaultOptions = { scrollwheel: false };
@@ -22,12 +23,14 @@ const RegularMap = withScriptjs(
       defaultCenter={defaultCenter}
       defaultOptions={defaultOptions}
     >
-      <Marker position={defaultCenter} />
+      <Marker position={defaultCenter} onClick={props.onClickMarker} />
     </GoogleMap>
   ))
 );
 
 const VagasComponent = () => {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <div className="container mx-auto pb-5 px-8">
       <div className="md:px-16 mb-5 flex flex-col items-center center pt-4 md:pt-4 relative">
@@ -41,7 +44,9 @@ const VagasComponent = () => {
         loadingElement={<div style={loadingElementStyle} />}
         containerElement={<div style={containerElementStyle} />}
         mapElement={<div style={mapElementStyle} />}
+        onClickMarker={() => setOpenModal(true)}
       />
+      <ModalVaga open={openModal} onClose={() => setOpenModal(false)} />
     </div>
   );
 };
