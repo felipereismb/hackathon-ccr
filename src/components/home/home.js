@@ -13,7 +13,7 @@ const HomeComponent = () => {
       <SteakholdersSection />
       <PrepareComponent />
       <ServicesSection />
-      <QuestionsSection />
+      {/* <QuestionsSection /> */}
     </div>
   );
 };

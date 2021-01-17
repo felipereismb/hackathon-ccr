@@ -1,15 +1,15 @@
 import React from "react";
 
 import UINavBar from "app/components/UI/navbar/navbar";
-import HomeComponent from "app/components/home/home";
+import DashComponent from "app/components/dash";
 
-const home = ({ type }) => {
+const dash = ({ type }) => {
   return (
     <>
       <UINavBar type={type} />
-      <HomeComponent />
+      <DashComponent />
     </>
   );
 };
 
-export default home;
+export default dash;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const NavBar = () => {
+const NavBar = ({ type }) => {
   return (
     <header>
       <div className="container mx-auto px-32 py-4">
@@ -12,40 +12,53 @@ const NavBar = () => {
             />
           </div>
 
-          <div className="lg:flex lg:items-center lg: justify-end">
-            <div className="text-sm">
-              <a
-                href="#home"
-                className="block mt-4 font-bold lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
-              >
-                Home
-              </a>
-              <a
-                href="#faca-parte"
-                className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
-              >
-                Encontre o primeiro emprego
-              </a>
-              <a
-                href="#beneficios"
-                className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
-              >
-                Vagas
-              </a>
-              <a
-                href="#perguntas-frequentes"
-                className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
-              >
-                About us
-              </a>
-              <a
-                href="/login"
-                className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25"
-              >
-                Login
-              </a>
+          {type === "dash" && (
+            <div className="lg:flex lg:items-center lg: justify-end">
+              <div className="mr-3">Felipe Reis</div>
+              <img
+                className="rounded-full"
+                src="imgs/user.jpeg"
+                alt="usuario"
+                style={{ height: "50px", width: "50px" }}
+              />
             </div>
-          </div>
+          )}
+          {type !== "dash" && (
+            <div className="lg:flex lg:items-center lg: justify-end">
+              <div className="text-sm">
+                <a
+                  href="#home"
+                  className="block mt-4 font-bold lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
+                >
+                  Home
+                </a>
+                <a
+                  href="#faca-parte"
+                  className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
+                >
+                  Encontre o primeiro emprego
+                </a>
+                <a
+                  href="#beneficios"
+                  className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
+                >
+                  Vagas
+                </a>
+                <a
+                  href="#perguntas-frequentes"
+                  className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25 mr-4"
+                >
+                  About us
+                </a>
+                <a
+                  href="/login"
+                  className="block mt-4 lg:inline-block lg:mt-0 text-teal-lighter hover:opacity-25"
+                >
+                  Login
+                </a>
+              </div>
+            </div>
+          )}
         </nav>
       </div>
     </header>

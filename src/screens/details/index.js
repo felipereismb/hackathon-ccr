@@ -1,15 +1,15 @@
 import React from "react";
 
 import UINavBar from "app/components/UI/navbar/navbar";
-import HomeComponent from "app/components/home/home";
+import DetailsComponent from "app/components/details";
 
-const home = ({ type }) => {
+const details = ({ type }) => {
   return (
     <>
       <UINavBar type={type} />
-      <HomeComponent />
+      <DetailsComponent />
     </>
   );
 };
 
-export default home;
+export default details;
