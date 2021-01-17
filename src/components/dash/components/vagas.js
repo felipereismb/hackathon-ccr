@@ -9,10 +9,10 @@ import {
 
 import Separator from "src/components/UI/separator";
 
-const defaultCenter = { lat: 40.748817, lng: -73.985428 };
+const defaultCenter = { lat: -10.252673, lng: -48.324874 };
 const defaultOptions = { scrollwheel: false };
 const loadingElementStyle = { height: "100%" };
-const containerElementStyle = { height: "280px" };
+const containerElementStyle = { height: "500px" };
 const mapElementStyle = { height: "100%" };
 
 const RegularMap = withScriptjs(
@@ -29,10 +29,10 @@ const RegularMap = withScriptjs(
 
 const VagasComponent = () => {
   return (
-    <div className="container mx-auto px-8">
+    <div className="container mx-auto pb-5 px-8">
       <div className="md:px-16 mb-5 flex flex-col items-center center pt-4 md:pt-4 relative">
         <div className="font-bold  mb-4" style={{ fontSize: "36px" }}>
-          Quem participa do intercâmbio
+          Vagas
         </div>
         <Separator />
       </div>
