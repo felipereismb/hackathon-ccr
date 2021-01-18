@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `yarn install`
+### `yarn install ou npm install`
 
 Instala todas as dependências necessárias para execurar o projeto.
 
