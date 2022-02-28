@@ -8,7 +8,7 @@ Programa Brasis: se baseia em um intercâmbio de trabalho em âmbito nacional, c
 
 
 # Desafio
-Buscar ideias ou soluções inovadoras que usem a tecnologia para proporcionar maior inclusão do público jovem em pelo menos umas das seguintes áreas:
+[2ª Edição Hackathon CCR](https://www.grupoccr.com.br/hackathonccr/). Buscar ideias ou soluções inovadoras que usem a tecnologia para proporcionar maior inclusão do público jovem em pelo menos umas das seguintes áreas:
 Geração de renda, Educação, Empregabilidade e Cultura.
 
 # Participantes
